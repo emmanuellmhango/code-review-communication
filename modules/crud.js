@@ -42,19 +42,21 @@ export default class Todo {
     ul.appendChild(listInput);
     tasks.forEach((task) => {
       const listItem = document.createElement('li');
+      const listItemDescription = document.createElement('span');
+      const dots = document.createElement('i');
+      const checkbox = document.createElement('input');
+      
       listItem.classList.add('task');
       listItem.id = task.index.toString().concat('-task');
-      const checkbox = document.createElement('input');
+
       checkbox.type = 'checkbox';
       checkbox.id = task.index.toString().concat('-check');
       listItem.appendChild(checkbox);
 
-      const listItemDescription = document.createElement('span');
       listItemDescription.classList.add('description');
       listItemDescription.innerText = task.description;
       listItem.appendChild(listItemDescription);
 
-      const dots = document.createElement('i');
       dots.classList.add('fa', 'fa-ellipsis-v', 'span-two', 'move', 'recycle-bin');
       dots.id = task.index;
       listItem.appendChild(dots);
