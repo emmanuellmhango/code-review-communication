@@ -45,7 +45,7 @@ export default class Todo {
       const listItemDescription = document.createElement('span');
       const dots = document.createElement('i');
       const checkbox = document.createElement('input');
-      
+
       listItem.classList.add('task');
       listItem.id = task.index.toString().concat('-task');
 
